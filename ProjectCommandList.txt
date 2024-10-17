@@ -1,0 +1,42 @@
+Data Access Size:
+
+fio --name=ssd_test_4kb --ioengine=libaio --rw=randrw --rwmixread=50 --bs=4k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=32 --filename=/mnt/t/testfile
+
+fio --name=ssd_test_16kb --ioengine=libaio --rw=randrw --rwmixread=50 --bs=16k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=32 --filename=/mnt/t/testfile
+
+fio --name=ssd_test_32kb --ioengine=libaio --rw=randrw --rwmixread=50 --bs=32k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=32 --filename=/mnt/t/testfile
+
+fio --name=ssd_test_128kb --ioengine=libaio --rw=randrw --rwmixread=50 --bs=128k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=32 --filename=/mnt/t/testfile
+
+
+Read vs Write Ratio:
+
+fio --name=ssd_test --ioengine=libaio --rw=randread --bs=4k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=32 --filename=/mnt/t/testfile
+
+fio --name=ssd_test --ioengine=libaio --rw=randrw --rwmixread=70 --bs=4k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=32 --filename=/mnt/t/testfile
+
+fio --name=ssd_test --ioengine=libaio --rw=randrw --rwmixread=50 --bs=4k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=32 --filename=/mnt/t/testfile
+
+fio --name=ssd_test --ioengine=libaio --rw=randrw --rwmixread=30 --bs=4k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=32 --filename=/mnt/t/testfile
+
+fio --name=ssd_test --ioengine=libaio --rw=randwrite --bs=4k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=32 --filename=/mnt/t/testfile
+
+
+I/O Queue Depth:
+
+ fio --name=ssd_test --ioengine=libaio --rw=randread --bs=4k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=1 --filename=/mnt/t/testfile
+
+ fio --name=ssd_test --ioengine=libaio --rw=randread --bs=4k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=4 --filename=/mnt/t/testfile
+
+ fio --name=ssd_test --ioengine=libaio --rw=randread --bs=4k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=16 --filename=/mnt/t/testfile
+
+ fio --name=ssd_test --ioengine=libaio --rw=randread --bs=4k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=64 --filename=/mnt/t/testfile
+
+ fio --name=ssd_test --ioengine=libaio --rw=randread --bs=4k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=256 --filename=/mnt/t/testfile
+
+ fio --name=ssd_test --ioengine=libaio --rw=randread --bs=4k --numjobs=1 --size=1G --direct=1 --runtime=60 --time_based --iodepth=1024 --filename=/mnt/t/testfile
+
+
+
+
+
